@@ -239,14 +239,16 @@ console.log(arrayDog);
 
 function getArrayDog(arrayDog) {
   return new Promise((resolve, reject) => {
-    max=arrayDog[0];
+     let max=arrayDog[0];
     for (const itemdog of arrayDog) {
       if(arrayDog[key].age>max)resolve(max);
     }
   });
 }
-getArrayDog().then((res)=>{console.log(res);})
-getArrayDog().catch((rej)=>{console.log(rej);})
+// getArrayDog().then((res)=>{console.log(res);})
+// getArrayDog().catch((rej)=>{console.log(rej);})
+
+
 
 
 
