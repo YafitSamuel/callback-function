@@ -3,6 +3,8 @@
 // Create a Promise object with a function that returns the word "goodbye" in case of failure.
 // Create a Promise object with a function that returns the word "yes" in case of success and the word "no" in case of failure.
 // Create a Promise object with a function that returns the word "yes" in case of success and the word "no" in case of failure, print the function's computers to the log.
+
+
 // let myPromise = new Promise((resolve, reject) => {});
 
 // let secondPromise = new Promise((resolve, reject) => {
@@ -86,8 +88,7 @@
 //     console.log(rej);
 //   });
 
-// =====================================21.10.2021===================================================
-
+// =====================================21.10.2021=====================================
 //  function getAll (name) {
 //   return new Promise((resolve,reject)=>{
 //     name? resolve("yes"):  reject("sorry")
@@ -126,95 +127,75 @@
 // asyncFunction().then((res)=>{console.log(res);})
 // asyncFunction().catch((rej)=>{console.log(rej);})
 
-// 1.	צרו פונקציה שמחזירה promise,
-// הפונקציה מקבלת שם, הפונקציה בודקת האם השם שווה לשם שלכם.
-// צרו פונקציה אסיכרונית שקוראת לפונקצית הפרומיס ומחזירה את התוצאה.
-// קראו לפונקציה האסיכרונית והדפיסו את התוצאה.
 
-function getFunPromise(name) {
-  return new Promise((resolve, reject) => {
-    name == "yafit" ? resolve("good") : reject("error");
-  });
-}
+// =============================1========================
 
-async function asyncGetPromise() {
-  return await getFunPromise("dhbcd");
-}
+// 1. Create a function that returns a promise,
+// The function gets a name, the function checks if the name is equal to your name.
+// Create an asynchronous function that calls the promis function and returns the result.
+// Call the synchronous function and print the result.
 
-asyncGetPromise()
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((rej) => {
-    console.log(rej);
-  });
+// function getFunPromise(name) {
+//   return new Promise((resolve, reject) => {
+//     name == "yafit" ? resolve("good") : reject("error");
+//   });
+// }
+
+// async function asyncGetPromise() {
+//   return await getFunPromise("dhbcd");
+// }
+
+// asyncGetPromise()
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((rej) => {
+//     console.log(rej);
+//   });
+
+
+// =============================2========================
 
 // 2.	צרו פונקציה שמחזירה promise,
 //  הפונקציה מקבלת 2 מספרים, הפונקציה בודקת האם המספרים זהים.
 // צרו פונקציה אסיכרונית שקוראת לפונקצית הפרומיס ומחזירה את התוצאה.
 // קראו לפונקציה האסיכרונית והדפיסו את התוצאה.
 
-function getTwoNumber(num1, num2) {
-  return new Promise((resolve, reject) => {
-    num1 == num2 ? resolve("good") : reject("not good");
-  });
-}
+// function getTwoNumber(num1, num2) {
+//   return new Promise((resolve, reject) => {
+//     num1 == num2 ? resolve("good") : reject("not good");
+//   });
+// }
 
-async function asyncGetProm() {
-  return await getTwoNumber(5, 5);
-}
+// async function asyncGetProm() {
+//   return await getTwoNumber(5, 5);
+// }
 
-getTwoNumber()
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((rej) => {
-    console.log(rej);
-  });
+// getTwoNumber()
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((rej) => {
+//     console.log(rej);
+//   });
 
-// 3.	צרו פונקציה שמחזירה promise, הפונקציה מקבלת סטרינג, הפונקציה בודקת האם אורך הסטרינג גדול מ 6.
-// הוסיפו טיימר שפועל 4 שניות ורק לאחר מכן מחזיר תשובות.
-// צרו פונקציה אסיכרונית שקוראת לפונקצית הפרומיס ומחזירה את התוצאה.
-// קראו לפונקציה האסיכרונית והדפיסו את התוצאה למסך.
-// הציגו אנימציה של טעינה בזמן שמחכים לתשובה.
 
-function getLodgingGif() {
-  gif.innerHTML += `<img  id="image" src="./img/loading-buffering.gif" alt="loading ">`;
-}
+// =============================3========================
 
-function getAllInString(str) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      str.length > 6 ? resolve("long") : reject("short");
-    }, 4000);
-  });
-}
-async function asyncFunctionGetPro() {
-  try {
-    getLodgingGif();
-    return await getAllInString("db6hujchd");
-  } catch (error) {
-    return error;
-  }
-}
+//! 3. Create a function that returns a promise, the function receives a string, 
+// the function checks whether the string length is greater than 6.
+//! Add a timer that runs for 4 seconds and only then returns answers.
+//! Create an asynchronous function that calls the promise function and returns the result.
+//! Call the synchronous function and print the result on the screen.
+//! Show an animation of charging while waiting for an answer.
 
-asyncFunctionGetPro()
-  .then((res) => {
-    div1.innerHTML += `${res}`;
-  })
-  .catch((rej) => {
-    div1.innerHTML += `${res}`;
-  })
-  .finally(() => {
-    image.style.display = "none";
-  });
-
-// צרו מערך של 3 כלבים, לכל כלב יש שם, גיל וסוג.
-// צרו פונקציה שמחזירה promise, הפונקציה מקבלת מערך של כלבים, הפונקציה מחזירה את הכלב הזקן ביותר.
-// הוסיפו טיימר שפועל 5 שניות ורק לאחר מכן מחזיר תשובות.
-// צרו פונקציה אסיכרונית שקוראת לפונקצית הפרומיס ומחזירה את התוצאה.
-// קראו לפונקציה האסיכרונית והדפיסו את התוצאה למסך.
-// הציגו אנימציה של כלב בזמן שמחכים לתשובה.
+//! Create an array of 3 dogs, each dog has a name, age and type.
+//! Create a function that returns a promise, the function gets an array of dogs,
+//  the function returns the oldest dog.
+//! Add a timer that runs for 5 seconds and only then returns answers.
+//! Create an asynchronous function that calls the promise function and returns the result.
+//! Call the synchronous function and print the result on the screen.
+//! Show a dog animation while waiting for an answer.
 
 class Dog {
   name;
@@ -231,25 +212,144 @@ let dog1 = new Dog("boldog", "shir", 78);
 let dog2 = new Dog("rex", "shir", 4);
 let dog3 = new Dog("pic", "shir", 4);
 
-let arrayDog=[dog1,dog2,dog3]
+let arrayDog = [dog1, dog2, dog3];
 
 console.log(arrayDog);
 
-
-
 function getArrayDog(arrayDog) {
   return new Promise((resolve, reject) => {
-     let max=arrayDog[0];
-    for (const itemdog of arrayDog) {
-      if(arrayDog[key].age>max)resolve(max);
-    }
+    setTimeout(() => {
+      let max = arrayDog[0];
+      for (const itemdog of arrayDog) {
+        if (itemdog.age > max.age) {
+          max = itemdog;
+        }
+      }
+
+      resolve(max);
+    }, 5000);
   });
 }
-// getArrayDog().then((res)=>{console.log(res);})
-// getArrayDog().catch((rej)=>{console.log(rej);})
+
+async function unscFunctionDog(arrayDog) {
+  try {
+    dogLoading();
+    return await getArrayDog(arrayDog);
+  } catch (error) {
+    return error;
+  }
+}
+function dogLoading() {
+  div2.innerHTML = `<img id="dog11" src="./img/gog gif.gif">`;
+}
+let dog11 = document.getElementById("dog11");
+function stopDogLoading() {
+  div2.style.display = "none";
+}
+
+unscFunctionDog(arrayDog)
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((rej) => {
+    console.log(rej);
+  })
+  .finally(() => {
+    stopDogLoading();
+  });
 
 
 
+//! in class
+// =====================================================
 
+// class Dog {
+//   name;
+//   type;
+//   age;
+//   constructor(nameFromOut, typeFromOut, ageFromOut) {
+//     this.name = nameFromOut;
+//     this.type = typeFromOut;
+//     this.age = ageFromOut;
+//   }
+// }
 
+// let dog1 = new Dog("boldog", "shir", 78);
+// let dog2 = new Dog("rex", "shir", 4);
+// let dog3 = new Dog("pic", "shir", 4);
 
+// let arrayDog = [dog1, dog2, dog3];
+
+// const dogArray = [
+//   new Dog("boldog", "shir", 78),
+//   new Dog("rex", "shir", 4),
+//   new Dog("pic", "shir", 4),
+// ];
+
+// function getOldDog(dogArray) {
+//   let Max = dogArray[0];
+//   for (const itemdog of dogArray) {
+//     if (itemdog.age > Max.age) Max = itemdog;
+//   }
+//   return Max;
+// }
+
+// function dogsPorimes() {
+//   return new Promise((resolve, reject) => {
+//     const oldestDog = getOldDog(dogArray);
+//     setTimeout(() => {
+//     oldestDog ? resolve(oldestDog) : reject({massege :"error, dog not fond"});
+//   }, 5000);
+//   });
+// }
+
+// async function asyncFunction() {
+//   try{
+//     dogLoading()
+//  await dogsPorimes()
+//   }
+//   catch(err){
+//     alert(error.massege)
+//   }
+
+// }
+
+// asyncFunction()
+// .then((res)=>{console.log(res);})
+// .catch((rej)=>{console.log(rej);})
+// .finally(()=>{stopDogLoading()})
+
+// function dogLoading() {
+//   div2.innerHTML = `<img id="dog1" src="./img/gog gif.gif">`;
+// }
+// function stopDogLoading() {
+//   dog1.style.display = "none";
+// }
+
+// //!בתשובה זה נותן לי את הקי של התשובה
+
+// let ApartmentsMap = new Map([
+//   [1, 2],
+//   [2, 14],
+//   [3, 10],
+//   [4, 9],
+// ]);
+// function apaetmentPromise(mapParams) {
+//   return new Promise((resolve, reject) => {
+//     let maxValue = 0;
+//     let maxKey = 0;
+
+//     for (const item of mapParams.keys()) {
+//       if (mapParams.get(item) > maxValue) maxKey = item;
+//       maxValue = mapParams.get(item);
+//     }
+//     maxKey ? resolve(maxKey) : reject("error");
+//   });
+// }
+// apaetmentPromise(ApartmentsMap)
+//   .then((res) => {
+//     console.log(res);
+//   })
+//   .catch((rej) => {
+//     console.log(rej);
+//   });
